@@ -18,18 +18,18 @@ type DockerHost struct {
 	containerId string
 }
 
-type DockerSettings struct {
+type DockerConfig struct {
 	Image string
 	Tag   string
 
 	Hostname string
 }
 
-func (d DockerSettings) ImageWithTag() string {
+func (d DockerConfig) ImageWithTag() string {
 	return fmt.Sprintf("%s:%s", d.Image, d.Tag)
 }
 
-func DockerPreloadImage(c *client.Client, settings DockerSettings) error {
+func DockerPreloadImage(c *client.Client, settings DockerConfig) error {
 	log.Printf("preloading image %q", settings.ImageWithTag())
 	msg, err := c.ImagePull(context.TODO(), settings.ImageWithTag(), types.ImagePullOptions{})
 	defer msg.Close()
@@ -40,7 +40,7 @@ func DockerPreloadImage(c *client.Client, settings DockerSettings) error {
 	return err
 }
 
-// func NewDockerHost(c *client.Client, settings DockerSettings) (*DockerHost, error) {
+// func NewDockerHost(c *client.Client, settings DockerConfig) (*DockerHost, error) {
 // 	resp, err := c.ContainerCreate(context.TODO(), client.Config{
 // 			Image:    settings.ImageWithTag(),
 // 			Hostname: settings.Hostname,
