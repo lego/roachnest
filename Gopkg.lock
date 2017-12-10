@@ -8,6 +8,18 @@
   version = "v0.4.5"
 
 [[projects]]
+  name = "github.com/Shopify/toxiproxy"
+  packages = [".","stream","toxics"]
+  revision = "623b654fe75017425d0085f20ceaf523dc7449a8"
+  version = "v2.1.2"
+
+[[projects]]
+  name = "github.com/cenkalti/backoff"
+  packages = ["."]
+  revision = "61153c768f31ee5f130071d08fc82b85208528de"
+  version = "v1.1.0"
+
+[[projects]]
   name = "github.com/docker/distribution"
   packages = ["digest","reference"]
   revision = "48294d928ced5dd9b378f7fd7c6f5da3ff3f2c89"
@@ -32,16 +44,52 @@
   version = "v0.3.2"
 
 [[projects]]
+  name = "github.com/gorilla/context"
+  packages = ["."]
+  revision = "1ea25387ff6f684839d82767c1733ff4d4d15d0a"
+  version = "v1.1"
+
+[[projects]]
+  name = "github.com/gorilla/mux"
+  packages = ["."]
+  revision = "7f08801859139f86dfafd1c296e2cba9a80d292e"
+  version = "v1.6.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/lib/pq"
+  packages = [".","oid"]
+  revision = "83612a56d3dd153a94a629cd64925371c9adad78"
+
+[[projects]]
   name = "github.com/moby/moby"
   packages = ["client"]
   revision = "eef6495eddab52828327aade186443681ed71a4e"
   version = "v17.03.2-ce-rc1"
 
 [[projects]]
+  name = "github.com/phayes/freeport"
+  packages = ["."]
+  revision = "b8543db493a5ed890c5499e935e2cad7504f3a04"
+  version = "1.0.2"
+
+[[projects]]
   name = "github.com/pkg/errors"
   packages = ["."]
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
   version = "v0.8.0"
+
+[[projects]]
+  name = "github.com/sirupsen/logrus"
+  packages = ["."]
+  revision = "d682213848ed68c0a260ca37d6dd5ace8423f5ba"
+  version = "v1.0.4"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/crypto"
+  packages = ["ssh/terminal"]
+  revision = "94eea52f7b742c7cbe0b03b22f0c4c8631ece122"
 
 [[projects]]
   branch = "master"
@@ -52,12 +100,18 @@
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
-  packages = ["windows"]
+  packages = ["unix","windows"]
   revision = "b8f5ef32195cae6470b728e8ca677f0dbed1a004"
+
+[[projects]]
+  branch = "v1"
+  name = "gopkg.in/tomb.v1"
+  packages = ["."]
+  revision = "dd632973f1e7218eb1089048e0798ec9ae7dceb8"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "81032bfaffc128a42425620baaf04c956382a7c40b00c74dd740db138cfed994"
+  inputs-digest = "f39415af0f69b37e68593ea6a691fd0e97bb07d2ba97354e11e2f3f4881e8da0"
   solver-name = "gps-cdcl"
   solver-version = 1
